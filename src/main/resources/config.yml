@@ -1,0 +1,45 @@
+mysql:
+  host: 'localhost'
+  port: 3306
+  database: 'minecraft'
+  username: 'root'
+  password: ''
+
+quests:
+  block:
+    walk:
+      objective: 300
+      broadcast-message: "&2{player} won the walk quest" #set it empty "" if you don't want to broadcast this message. Available placeholder: {player} -> player name
+      message: "&2You won the walk quest" #set it empty "" if you don't want to display this message. Available placeholder: {player} -> player name
+      commands:  #These commands are executed when quest is complete. Use @player to replace player name. Don't use slash at start!
+        - "give @player stone 300"
+    break:
+      objective: 50
+      broadcast-message: "&2{player} won the break quest"
+      message: "&2You won the walk quest
+      commands:
+        - "give @player stone 50"
+    place:
+      objective: 100
+      broadcast-message: "&2{player} won the place quest"
+      message: "&2You won the walk quest
+      commands:
+        - "give @player stone 100"
+  command-execute:
+    objective: 10
+      broadcast-message: "&2{player} won the command quest"
+      message: "&2You won the walk quest
+      commands:
+        - "give @player diamond_block 10"
+  mobs-kill:
+    objective: 40
+      broadcast-message: "&2{player} won the kills quest"
+      message: "&2You won the walk quest
+      commands:
+        - "give @player gold_ingot 40"
+
+messages:
+  insufficient-permissions: "&cInsufficient permissions"
+  incorrect-command: "&cIncorrect command, type /cq <player>"
+  player-not-found: "&cThere isn't a player with this name"
+  data-collecting: "&7I'm collecting data, wait..."

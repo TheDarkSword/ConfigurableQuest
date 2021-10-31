@@ -1,0 +1,10 @@
+name: ConfigurableQuest
+version: 1.0
+author: TheDarkSword
+description: Just a Configurable Quest plugin made for Dev Room
+main: it.thedarksword.configurablequest.ConfigurableQuest
+
+commands:
+  configurablequest:
+    aliases: [cq]
+    description: Just the Main Command
